@@ -2,6 +2,7 @@ const sgMail = require('@sendgrid/mail')
 sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
 exports.handler = async function (event, context) {
+    console.log(sgMail)
     const msg = {
         to: 'f.parrou@agence42.fr',
         from: 'test@example.com',
