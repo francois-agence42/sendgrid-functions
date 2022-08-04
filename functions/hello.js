@@ -13,7 +13,7 @@ exports.handler = async function (event, context, callback) {
     to: 'f.parrou@agence42.fr',
     from: 'test@example.com',
     subject: 'Sending with SendGrid is Fun',
-    text: 'and easy to do anywhere, even with Node.js',
+    text: 'and easy to do anywhere, even with Node.js ',
     html: `<strong>Good</strong>`,
   };
 
