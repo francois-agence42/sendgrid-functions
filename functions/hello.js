@@ -15,14 +15,13 @@ exports.handler = async function (event, context) {
         console.log('Email sent')
         return {
             statusCode: 200,
-            body: JSON.stringify({ message: "Coucou mohamed " }),
         };
       })
       .catch((error) => {
         console.error(error)
-        return {
-            statusCode: error.response.statusCode,
-            body: JSON.stringify({ message: error.message }),
-          };
+        // return {
+        //     statusCode: error.response.statusCode,
+        //     body: JSON.stringify({ message: error.message }),
+        //   };
       })
   };
