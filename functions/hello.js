@@ -5,14 +5,14 @@ const {
 } = process.env;
 
 exports.handler = async function (event, context, callback) {
-//   const { message, senderEmail, senderName } = JSON.parse(event.body);
+const { message, senderEmail, senderName } = JSON.parse(event.body);
   client.setApiKey(SENDGRID_API_KEY);
 
   const data = {
     to: 'f.parrou@agence42.fr',
     from: SENDGRID_FROM_EMAIL,
-    subject: 'Sending with SendGrid is Fun',
-    html: `<strong>Good</strong>`,
+    subject: 'Bonjour de sendgrid',
+    html: message,
   };
 
   try {

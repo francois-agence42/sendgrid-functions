@@ -38,6 +38,31 @@
     <small>We'll never share your email with anyone else.</small>
 
     <!-- Button -->
-    <button type="submit">Submit</button>
+    <button type="submit" @submit.prevent="sendMail()">Submit</button>
   </form>
 </template>
+
+<script>
+export default {
+  methods: {
+    sendMail() {
+      // fetch('https://sendgridfunctions.netlify.app/.netlify/functions/hello', {
+      //   method: 'POST',
+      //   body: JSON.stringify({
+      //     firstname: this.$refs.firstname.value,
+      //     lastname: this.$refs.lastname.value,
+      //     email: this.$refs.email.value,
+      //   }),
+      // })
+      //   .then(res => res.json())
+      //   .then(data => {
+      //     console.log(data);
+      //   })
+      //   .catch(err => {
+      //     console.log(err);
+      //   });
+      console.log("sendMail");
+    },
+  },
+};
+</script>
