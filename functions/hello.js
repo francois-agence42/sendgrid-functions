@@ -18,12 +18,14 @@ exports.handler = async function (event, context, callback) {
   };
 
   try {
+    console.log('Sending email...');
     await client.send(data);
     return {
       statusCode: 200,
       body: 'Message sent',
     };
   } catch (err) {
+    console.log('Error sending email', err);
     return {
       statusCode: err.code,
       body: JSON.stringify({ msg: err.message }),
