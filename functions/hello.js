@@ -1,7 +1,6 @@
 const client = require('@sendgrid/mail');
 const {
   SENDGRID_API_KEY,
-  SENDGRID_TO_EMAIL,
   SENDGRID_FROM_EMAIL,
 } = process.env;
 
@@ -11,9 +10,8 @@ exports.handler = async function (event, context, callback) {
 
   const data = {
     to: 'f.parrou@agence42.fr',
-    from: 'test@example.com',
+    from: SENDGRID_FROM_EMAIL,
     subject: 'Sending with SendGrid is Fun',
-    text: 'and easy to do anywhere, even with Node.js ',
     html: `<strong>Good</strong>`,
   };
 
