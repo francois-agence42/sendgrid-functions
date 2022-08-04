@@ -14,8 +14,11 @@ exports.handler = async function (event, context) {
       .send(msg)
       .then(() => {
         console.log('Email sent')
+      })
+      .then(() => {
         return {
             statusCode: 200,
+            body: JSON.stringify('Email sent')
         };
       })
       .catch((error) => {
