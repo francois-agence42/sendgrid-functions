@@ -130,14 +130,13 @@ exports.handler = async function (event, context, callback) {
     console.log('email sent');
     return {
       statusCode: 200,
-      body: 'Message sent',
+      body: 'message sent',
     };
   } catch (err) {
     console.log('Error sending email', err);
     return {
       statusCode: err.code,
-      body: 'error',
-      // body: JSON.stringify({ msg: err.message }),
+      body: JSON.stringify({ msg: err.message }),
     };
   }
 };

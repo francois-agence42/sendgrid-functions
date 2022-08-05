@@ -76,11 +76,14 @@ export default {
           message: this.message,
         }),
       })
-        .then((res) => res.json())
+        .then((res) => {
+          res = res.json();
+          if (res.status === 200) {
+            this.$router.push("/thank-you");
+          }
+        })
         .then((data) => {
           console.log(data);
-          // redirect to thank you page
-          this.$router.push("/thank-you");
         })
         .catch((err) => {
           console.log(err);
