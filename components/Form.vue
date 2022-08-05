@@ -72,35 +72,45 @@ export default {
   methods: {
     async sendMail() {
       this.isLoading = true;
-      await fetch(
-        "https://sendgridfunctions.netlify.app/.netlify/functions/hello",
-        {
-          method: "POST",
-          body: JSON.stringify({
-            formName: this.formName,
-            firstname: this.firstname,
-            lastname: this.lastname,
-            email: this.email,
-            message: this.message,
-          }),
-        }
-      )
-        .then((res) => {
-          this.isLoading = false;
-          res = res.json();
-          console.log("res", res);
-          if (res.status == 200) {
-            this.$router.push("/thank-you");
+      try {
+        const response = await fetch(
+          "https://sendgridfunctions.netlify.app/.netlify/functions/hello",
+          {
+            method: "POST",
+            body: JSON.stringify({
+              formName: this.formName,
+              firstname: this.firstname,
+              lastname: this.lastname,
+              email: this.email,
+              message: this.message,
+            }),
           }
-        })
-        .then(() => {
-          // this.$router.push("/thank-you");
-        })
-        .catch((err) => {
-          this.error = true;
-          this.isLoading = false;
-          console.log(err);
-        });
+        );
+        console.log("response.status: ", response.status); // 👉️ 200
+        console.log(response);
+      } catch (error) {
+        this.error = true;
+        this.isLoading = false;
+        console.log(error);
+      }
+      //     .then((res) => {
+      //       this.isLoading = false;
+      //       res = res.json();
+      //       console.log("res", res);
+      //       if (res.status == 200) {
+      //         this.$router.push("/thank-you");
+      //       }
+      //     })
+      //     .then((data) => {
+      //       console.log("data", data);
+      //       // this.$router.push("/thank-you");
+      //     })
+      //     .catch((err) => {
+      //       this.error = true;
+      //       this.isLoading = false;
+      //       console.log(err);
+      //     });
+      // },
     },
   },
 };
