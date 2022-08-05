@@ -11,7 +11,7 @@ exports.handler = async function (event, context, callback) {
 
   const data = {
     to: 'f.parrou@agence42.fr',
-    from: form.email,
+    from: 'f.parrou@agence42.fr',
     subject: `Message de ${form.firstname} ${form.lastname}`,
     html: `<!doctype html>
     <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
