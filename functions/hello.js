@@ -66,7 +66,7 @@ exports.handler = async function (event, context, callback) {
     <table border="0" cellpadding="0" cellspacing="0"><tr><td class="c-outlook -outlook -outlook" style="vertical-align:middle;width:568px;">
     <![endif]--><div class="xc568 ogf c " style="font-size:0;text-align:left;direction:ltr;display:inline-block;vertical-align:middle;width:100%;">
     <table border="0" cellpadding="0" cellspacing="0" style="border:none;vertical-align:middle;" width="100%"><tbody><tr><td align="left" class="i " style="font-size:0;padding:0;word-break:break-word;">
-    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;border-spacing:0;"><tbody><tr><td style="width:74px;"> <img alt="" height="auto" src="img/1ee6c27a108583512dd064678cf25fac.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" title="" width="74">
+    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;border-spacing:0;"><tbody><tr><td style="width:74px;"> <img alt="" height="auto" src="https://sendgridfunctions.netlify.app/_nuxt/img/1ee6c27a108583512dd064678cf25fac.cdfa9e3.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" title="" width="74">
     
     </td></tr></tbody></table>
     </td></tr></tbody></table></div>
