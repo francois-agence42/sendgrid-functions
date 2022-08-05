@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section style="margin-top: 40px">
     <form @submit.prevent="sendMail()">
       <div class="grid">
         <label for="firstname">
@@ -45,7 +45,11 @@
         rows="5"
         required
       />
-
+      <div
+        style="martin-top: 20px"
+        class="g-recaptcha"
+        data-sitekey="p6LcI_E0hAAAAAF7gz9ZSEbjvSUdOWkr-HhKGmw1g'"
+      ></div>
       <button type="submit" :aria-busy="isLoading">Submit</button>
     </form>
     <mark v-if="error" style="margin: 0 auto">
@@ -56,6 +60,15 @@
 
 <script>
 export default {
+  head: {
+    script: [
+      {
+        src: "https://www.google.com/recaptcha/api.js",
+        async: true,
+        defer: true,
+      },
+    ],
+  },
   data: function () {
     return {
       formName: "Contact",

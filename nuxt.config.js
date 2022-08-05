@@ -18,7 +18,7 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {rel:"stylesheet" , href:"https://unpkg.com/@picocss/pico@latest/css/pico.min.css"}
-    ]
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
