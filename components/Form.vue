@@ -78,7 +78,7 @@ export default {
       })
         .then((res) => {
           res = res.json();
-          console.log(res);
+          console.log("res", res);
           if (res.status === 200) {
             this.$router.push("/thank-you");
           }
