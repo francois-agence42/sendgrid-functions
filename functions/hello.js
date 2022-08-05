@@ -57,7 +57,7 @@ exports.handler = async function (event, context, callback) {
     </style>
     <![endif]-->
     </head>
-    <body link="#DD0000" vlink="#DD0000" class="emailify" style="mso-line-height-rule:exactly;word-spacing:normal;background-color:#e5e5e5;"><div style="display:none;font-size:1px;color:#ffffff;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;"> preview text </div><div class="bg " style="background-color:#e5e5e5;">
+    <body link="#DD0000" vlink="#DD0000" class="emailify" style="mso-line-height-rule:exactly;word-spacing:normal;background-color:#e5e5e5;"><div style="display:none;font-size:1px;color:#ffffff;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;"> ${form.message} </div><div class="bg " style="background-color:#e5e5e5;">
     <!--[if mso | IE]>
     <table align="center" border="0" cellpadding="0" cellspacing="0" class="r-outlook -outlook pr-16-outlook pl-16-outlook -outlook" style="width:600px;" width="600" bgcolor="#fffffe"><tr><td style="line-height:0;font-size:0;mso-line-height-rule:exactly;">
     <![endif]--><div class="r pr-16 pl-16 " style="background:#fffffe;background-color:#fffffe;margin:0px auto;max-width:600px;">
@@ -136,7 +136,8 @@ exports.handler = async function (event, context, callback) {
     console.log('Error sending email', err);
     return {
       statusCode: err.code,
-      body: JSON.stringify({ msg: err.message }),
+      body: 'error',
+      // body: JSON.stringify({ msg: err.message }),
     };
   }
 };
