@@ -45,9 +45,7 @@
         rows="5"
         required
       />
-      <!-- <small>Hey</small> -->
 
-      <!-- Button -->
       <button type="submit" :aria-busy="isLoading">Submit</button>
     </form>
     <mark v-if="error" style="margin: 0 auto">
@@ -86,31 +84,21 @@ export default {
             }),
           }
         );
-        console.log("response.status: ", response.status); // 👉️ 200
-        console.log(response);
+        if (response.ok && response.status === 200) {
+          this.isLoading = false;
+          this.message = "";
+          this.firstname = "";
+          this.lastname = "";
+          this.email = "";
+          tthis.$router.push("/thank-you");
+        } else {
+          this.error = true;
+        }
       } catch (error) {
         this.error = true;
         this.isLoading = false;
         console.log(error);
       }
-      //     .then((res) => {
-      //       this.isLoading = false;
-      //       res = res.json();
-      //       console.log("res", res);
-      //       if (res.status == 200) {
-      //         this.$router.push("/thank-you");
-      //       }
-      //     })
-      //     .then((data) => {
-      //       console.log("data", data);
-      //       // this.$router.push("/thank-you");
-      //     })
-      //     .catch((err) => {
-      //       this.error = true;
-      //       this.isLoading = false;
-      //       console.log(err);
-      //     });
-      // },
     },
   },
 };

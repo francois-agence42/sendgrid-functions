@@ -14,9 +14,9 @@ exports.handler = async function (event, context, callback) {
     from: 'f.parrou@agence42.fr',
     subject: `Message de ${form.firstname} ${form.lastname}`,
     html: `<!doctype html>
-    <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+    <html lang="fr" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
     <head>
-    <title> ${form.formName} </title>
+    <title>${form.formName}</title>
     <!--[if !mso]><!-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!--<![endif]-->
@@ -39,9 +39,9 @@ exports.handler = async function (event, context, callback) {
     </style>
     <!--<![endif]-->
     <style type="text/css">
-    @media only screen and (min-width:599px){.xc568{width:568px!important;max-width:568px;}.xc536{width:536px!important;max-width:536px;}}
+    @media only screen and (min-width:599px){.xc568{width:568px!important;max-width:568px;}.pc100{width:100%!important;max-width:100%;}.xc536{width:536px!important;max-width:536px;}}
     </style>
-    <style media="screen and (min-width:599px)">.moz-text-html .xc568{width:568px!important;max-width:568px;}.moz-text-html .xc536{width:536px!important;max-width:536px;}
+    <style media="screen and (min-width:599px)">.moz-text-html .xc568{width:568px!important;max-width:568px;}.moz-text-html .pc100{width:100%!important;max-width:100%;}.moz-text-html .xc536{width:536px!important;max-width:536px;}
     </style>
     <style type="text/css">
     @media only screen and (max-width:599px){table.fwm{width:100%!important;}td.fwm{width:auto!important;}}
@@ -57,17 +57,26 @@ exports.handler = async function (event, context, callback) {
     </style>
     <![endif]-->
     </head>
-    <body link="#DD0000" vlink="#DD0000" class="emailify" style="mso-line-height-rule:exactly;word-spacing:normal;background-color:#e5e5e5;"><div style="display:none;font-size:1px;color:#ffffff;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;"> ${form.message} </div><div class="bg " style="background-color:#e5e5e5;">
+    <body link="#DD0000" vlink="#DD0000" class="emailify" style="mso-line-height-rule:exactly;word-spacing:normal;background-color:#e5e5e5;"><div style="display:none;font-size:1px;color:#ffffff;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;"> preview text </div><div class="bg " style="background-color:#e5e5e5;">
     <!--[if mso | IE]>
     <table align="center" border="0" cellpadding="0" cellspacing="0" class="r-outlook -outlook pr-16-outlook pl-16-outlook -outlook" style="width:600px;" width="600" bgcolor="#fffffe"><tr><td style="line-height:0;font-size:0;mso-line-height-rule:exactly;">
     <![endif]--><div class="r pr-16 pl-16 " style="background:#fffffe;background-color:#fffffe;margin:0px auto;max-width:600px;">
-    <table align="center" border="0" cellpadding="0" cellspacing="0" style="background:#fffffe;background-color:#fffffe;width:100%;"><tbody><tr><td style="border:none;direction:ltr;font-size:0;padding:16px 16px 16px 16px;text-align:left;">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" style="background:#fffffe;background-color:#fffffe;width:100%;"><tbody><tr><td style="border:none;direction:ltr;font-size:0;padding:31px 16px 16px 16px;text-align:left;">
     <!--[if mso | IE]>
     <table border="0" cellpadding="0" cellspacing="0"><tr><td class="c-outlook -outlook -outlook" style="vertical-align:middle;width:568px;">
     <![endif]--><div class="xc568 ogf c " style="font-size:0;text-align:left;direction:ltr;display:inline-block;vertical-align:middle;width:100%;">
-    <table border="0" cellpadding="0" cellspacing="0" style="border:none;vertical-align:middle;" width="100%"><tbody><tr><td align="left" class="i " style="font-size:0;padding:0;word-break:break-word;">
-    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;border-spacing:0;"><tbody><tr><td style="width:74px;"> <img alt="" height="auto" src="https://sendgridfunctions.netlify.app/_nuxt/img/1ee6c27a108583512dd064678cf25fac.cdfa9e3.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" title="" width="74">
-    
+    <table border="0" cellpadding="0" cellspacing="0" style="border:none;vertical-align:middle;" width="100%"><tbody><tr><td class="" style="font-size:0;padding:0;word-break:break-word;">
+    <!--[if mso | IE]>
+    <table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:568px;" width="568"><tr><td style="line-height:0;font-size:0;mso-line-height-rule:exactly;">
+    <![endif]--><div class="" style="margin:0px auto;max-width:568px;">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" style="width:100%;"><tbody><tr><td style="direction:ltr;font-size:0;padding:0;text-align:center;">
+    <!--[if mso | IE]>
+    <table border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:568px;">
+    <![endif]--><div class="pc100 ogf" style="font-size:0;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td style="vertical-align:top;padding:0;">
+    <table border="0" cellpadding="0" cellspacing="0"  width="100%"><tbody><tr><td align="center" class="c " style="font-size:0;padding:0;word-break:break-word;">
+    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;border-spacing:0;" class="fwm"><tbody><tr><td style="width:198px;" class="fwm"> <img alt="" height="auto" src="https://sendgridfunctions.netlify.app/_nuxt/img/1ee6c27a108583512dd064678cf25fac.cdfa9e3.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" title="" width="198">
+    </td></tr></tbody></table>
     </td></tr></tbody></table>
     </td></tr></tbody></table></div>
     <!--[if mso | IE]>
@@ -76,13 +85,7 @@ exports.handler = async function (event, context, callback) {
     </td></tr></tbody></table></div>
     <!--[if mso | IE]>
     </td></tr></table>
-    <table align="center" border="0" cellpadding="0" cellspacing="0" class="r-outlook -outlook pr-16-outlook pl-16-outlook -outlook" style="width:600px;" width="600" bgcolor="#fffffe"><tr><td style="line-height:0;font-size:0;mso-line-height-rule:exactly;">
-    <![endif]--><div class="r pr-16 pl-16 " style="background:#fffffe;background-color:#fffffe;margin:0px auto;max-width:600px;">
-    <table align="center" border="0" cellpadding="0" cellspacing="0" style="background:#fffffe;background-color:#fffffe;width:100%;"><tbody><tr><td style="border:none;direction:ltr;font-size:0;padding:32px 32px 32px 32px;text-align:left;">
-    <!--[if mso | IE]>
-    <table border="0" cellpadding="0" cellspacing="0"><tr><td class="c-outlook -outlook -outlook" style="vertical-align:middle;width:536px;">
-    <![endif]--><div class="xc536 ogf c " style="font-size:0;text-align:left;direction:ltr;display:inline-block;vertical-align:middle;width:100%;">
-    <table border="0" cellpadding="0" cellspacing="0" style="border:none;vertical-align:middle;" width="100%"><tbody><tr><td align="center" class="x " style="font-size:0;word-break:break-word;"><div style="text-align:center;"><p style="Margin:0;text-align:center;"><span style="font-size:28px;font-family:Inter,Arial,sans-serif;font-weight:700;color:#000000;line-height:32px;">Depuis le formulaire : ${form.formName}</span></p></div>
+    <![endif]-->
     </td></tr></tbody></table></div>
     <!--[if mso | IE]>
     </td></tr></table>
@@ -96,7 +99,22 @@ exports.handler = async function (event, context, callback) {
     <!--[if mso | IE]>
     <table border="0" cellpadding="0" cellspacing="0"><tr><td class="c-outlook -outlook -outlook" style="vertical-align:middle;width:536px;">
     <![endif]--><div class="xc536 ogf c " style="font-size:0;text-align:left;direction:ltr;display:inline-block;vertical-align:middle;width:100%;">
-    <table border="0" cellpadding="0" cellspacing="0" style="border:none;vertical-align:middle;" width="100%"><tbody><tr><td align="left" class="x m" style="font-size:0;padding-bottom:30px;word-break:break-word;"><div style="text-align:left;"><p style="Margin:0;text-align:left;"><span style="font-size:20px;font-family:Inter,Arial,sans-serif;font-weight:600;color:#000000;line-height:23px;">Nouveau message de ${form.firstname} ${form.lastname}</span></p></div>
+    <table border="0" cellpadding="0" cellspacing="0" style="border:none;vertical-align:middle;" width="100%"><tbody><tr><td align="center" class="x " style="font-size:0;word-break:break-word;"><div style="text-align:center;"><p style="Margin:0;text-align:center;"><span style="font-size:28px;font-family:Inter,Arial,sans-serif;font-weight:700;color:#050713;line-height:32px;">Nouveau message de : ${form.firstname} ${form.lastname}</span></p></div>
+    </td></tr></tbody></table></div>
+    <!--[if mso | IE]>
+    </td></tr></table>
+    <![endif]-->
+    </td></tr></tbody></table></div>
+    <!--[if mso | IE]>
+    </td></tr></table>
+    <table align="center" border="0" cellpadding="0" cellspacing="0" class="r-outlook -outlook pr-16-outlook pl-16-outlook -outlook" style="width:600px;" width="600" bgcolor="#fffffe"><tr><td style="line-height:0;font-size:0;mso-line-height-rule:exactly;">
+    <![endif]--><div class="r pr-16 pl-16 " style="background:#fffffe;background-color:#fffffe;margin:0px auto;max-width:600px;">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" style="background:#fffffe;background-color:#fffffe;width:100%;"><tbody><tr><td style="border:none;direction:ltr;font-size:0;padding:32px 32px 49px 32px;text-align:left;">
+    <!--[if mso | IE]>
+    <table border="0" cellpadding="0" cellspacing="0"><tr><td class="c-outlook -outlook -outlook" style="vertical-align:middle;width:536px;">
+    <![endif]--><div class="xc536 ogf c " style="font-size:0;text-align:left;direction:ltr;display:inline-block;vertical-align:middle;width:100%;">
+    <table border="0" cellpadding="0" cellspacing="0" style="border:none;vertical-align:middle;" width="100%"><tbody><tr><td align="left" class="x m" style="font-size:0;padding-bottom:14px;word-break:break-word;"><div style="text-align:left;"><p style="Margin:0;text-align:left;"><span style="font-size:20px;font-family:Inter,Arial,sans-serif;font-weight:600;color:#141b56;line-height:23px;">Depuis le formulaire : ${form.formName}</span></p></div>
+    </td></tr><tr><td align="left" class="x m" style="font-size:0;padding-bottom:14px;word-break:break-word;"><div style="text-align:left;"><p style="Margin:0;text-align:left;"><span style="font-size:20px;font-family:Inter,Arial,sans-serif;font-weight:600;color:#141b56;line-height:23px;">Email : ${form.email}</span></p></div>
     </td></tr><tr><td align="left" class="x " style="font-size:0;padding-bottom:0;word-break:break-word;"><div style="text-align:left;"><p style="Margin:0;text-align:left;"><span style="font-size:16px;font-family:Inter,Arial,sans-serif;font-weight:400;color:#777777;line-height:24px;">${form.message}</span></p></div>
     </td></tr></tbody></table></div>
     <!--[if mso | IE]>
