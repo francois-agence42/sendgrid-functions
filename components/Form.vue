@@ -65,17 +65,20 @@ export default {
     };
   },
   methods: {
-    sendMail() {
-      fetch("https://sendgridfunctions.netlify.app/.netlify/functions/hello", {
-        method: "POST",
-        body: JSON.stringify({
-          formName: this.formName,
-          firstname: this.firstname,
-          lastname: this.lastname,
-          email: this.email,
-          message: this.message,
-        }),
-      })
+    async sendMail() {
+      await fetch(
+        "https://sendgridfunctions.netlify.app/.netlify/functions/hello",
+        {
+          method: "POST",
+          body: JSON.stringify({
+            formName: this.formName,
+            firstname: this.firstname,
+            lastname: this.lastname,
+            email: this.email,
+            message: this.message,
+          }),
+        }
+      )
         .then((res) => {
           res = res.json();
           console.log("res", res);
@@ -83,8 +86,7 @@ export default {
             this.$router.push("/thank-you");
           }
         })
-        .then((data) => {
-          console.log("data", data);
+        .then(() => {
           this.$router.push("/thank-you");
         })
         .catch((err) => {
