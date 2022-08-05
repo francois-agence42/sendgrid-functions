@@ -46,9 +46,9 @@
         required
       />
       <div
-        style="martin-top: 20px"
+        style="margin: 20px 0px"
         class="g-recaptcha"
-        data-sitekey="p6LcI_E0hAAAAAF7gz9ZSEbjvSUdOWkr-HhKGmw1g'"
+        data-sitekey="p6LcI_E0hAAAAAF7gz9ZSEbjvSUdOWkr-HhKGmw1g"
       ></div>
       <button type="submit" :aria-busy="isLoading">Submit</button>
     </form>
