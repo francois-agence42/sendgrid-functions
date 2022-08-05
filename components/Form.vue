@@ -79,6 +79,8 @@ export default {
         .then((res) => res.json())
         .then((data) => {
           console.log(data);
+          // redirect to thank you page
+          this.$router.push("/thank-you");
         })
         .catch((err) => {
           console.log(err);
