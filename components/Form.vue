@@ -36,7 +36,7 @@
         v-model="email"
         required
       />
-      <label for="message">your message</label>
+      <label for="message">Your message</label>
       <textarea
         id="message"
         name="message"
@@ -48,8 +48,11 @@
       <!-- <small>Hey</small> -->
 
       <!-- Button -->
-      <button type="submit">Submit</button>
+      <button type="submit" :aria-busy="isLoading">Submit</button>
     </form>
+    <mark v-if="error" style="margin: 0 auto">
+      Une erreur est survenue lors de l'envoi du message.
+    </mark>
   </section>
 </template>
 
@@ -62,10 +65,13 @@ export default {
       firstname: "",
       lastname: "",
       email: "",
+      isLoading: false,
+      error: false,
     };
   },
   methods: {
     async sendMail() {
+      this.isLoading = true;
       await fetch(
         "https://sendgridfunctions.netlify.app/.netlify/functions/hello",
         {
@@ -80,16 +86,19 @@ export default {
         }
       )
         .then((res) => {
+          this.isLoading = false;
           res = res.json();
           console.log("res", res);
-          if (res.status === 200) {
+          if (res.status == 200) {
             this.$router.push("/thank-you");
           }
         })
         .then(() => {
-          this.$router.push("/thank-you");
+          // this.$router.push("/thank-you");
         })
         .catch((err) => {
+          this.error = true;
+          this.isLoading = false;
           console.log(err);
         });
     },
