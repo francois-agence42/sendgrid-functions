@@ -90,7 +90,7 @@ export default {
           this.firstname = "";
           this.lastname = "";
           this.email = "";
-          tthis.$router.push("/thank-you");
+          this.$router.push("/thank-you");
         } else {
           this.error = true;
         }

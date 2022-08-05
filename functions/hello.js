@@ -75,7 +75,7 @@ exports.handler = async function (event, context, callback) {
     <![endif]--><div class="pc100 ogf" style="font-size:0;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
     <table border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td style="vertical-align:top;padding:0;">
     <table border="0" cellpadding="0" cellspacing="0"  width="100%"><tbody><tr><td align="center" class="c " style="font-size:0;padding:0;word-break:break-word;">
-    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;border-spacing:0;" class="fwm"><tbody><tr><td style="width:198px;" class="fwm"> <img alt="" height="auto" src="https://sendgridfunctions.netlify.app/_nuxt/img/1ee6c27a108583512dd064678cf25fac.cdfa9e3.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" title="" width="198">
+    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;border-spacing:0;" class="fwm"><tbody><tr><td style="width:198px;" class="fwm"> <img alt="" height="auto" src="https://sendgridfunctions.netlify.app/_nuxt/img/1ee6c27a108583512dd064678cf25fac.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;" title="" width="198">
     </td></tr></tbody></table>
     </td></tr></tbody></table>
     </td></tr></tbody></table></div>
