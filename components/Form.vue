@@ -84,7 +84,8 @@ export default {
           }
         })
         .then((data) => {
-          console.log(data);
+          console.log("data", data);
+          this.$router.push("/thank-you");
         })
         .catch((err) => {
           console.log(err);
