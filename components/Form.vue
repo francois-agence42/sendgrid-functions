@@ -46,7 +46,7 @@
         required
       />
       <div
-        style="margin: 20px 0px"
+        style="margin-bottom: 30px"
         class="g-recaptcha"
         data-sitekey="6LcI_E0hAAAAAF7gz9ZSEbjvSUdOWkr-HhKGmw1g"
       ></div>
