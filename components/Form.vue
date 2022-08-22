@@ -48,7 +48,7 @@
       <div
         style="margin: 20px 0px"
         class="g-recaptcha"
-        data-sitekey="p6LcI_E0hAAAAAF7gz9ZSEbjvSUdOWkr-HhKGmw1g"
+        data-sitekey="6LcI_E0hAAAAAF7gz9ZSEbjvSUdOWkr-HhKGmw1g"
       ></div>
       <button type="submit" :aria-busy="isLoading">Submit</button>
     </form>
